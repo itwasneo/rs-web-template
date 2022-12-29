@@ -1,0 +1,20 @@
+[placeholders.redis]
+type = "string"
+prompt = "Which Redis solution do you want to use?"
+choices = ["redis with connection pool (r2d2)", "none"]
+default = "redis with connection pool (r2d2)"
+
+[placeholders.use_cors]
+type = "bool"
+prompt = "Do you want to use actix-cors?"
+default = true
+
+[placeholders.include_optimization_flags]
+type = "bool"
+prompt = "Do you want to include compiler optimization flags for release builds?"
+default = true
+
+[hooks]
+pre = [
+    "ask-dotenv.rhai"
+]
