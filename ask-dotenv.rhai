@@ -1,7 +1,6 @@
 // Asks user whether to use '.env' file. Deletes the '.env' file accordingly.
 let use_dotenv = variable::prompt("Do you want to add .env file with default values?", true);
-if use_dotenv {}
-else {
+if !use_dotenv {
     file::delete(".env");
 }
 
